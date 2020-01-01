@@ -22,3 +22,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### For Atom Vue syntax highlighting
+config.cson:
+core:
+  customFileTypes:
+    'text.html.basic': [
+      'vue'
+    ]
