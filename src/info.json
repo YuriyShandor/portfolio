@@ -1,6 +1,63 @@
 {
+  "generalInfo": {
+    "name": "Yuriy Shandor",
+    "profession": "Front-End Developer",
+    "socials": [
+      {
+        "ttl": "facebook",
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/profile.php?id=100022797383028"
+      },
+      {
+        "ttl": "skype",
+        "icon": "fa-skype",
+        "link": "skype:yuriy_shandor?chat"
+      },
+      {
+        "ttl": "telegram",
+        "icon": "fa-telegram-plane",
+        "link": "https://t.me/Yuriy_Shandor"
+      },
+      {
+        "ttl": "github",
+        "icon": "fa-github-alt",
+        "link": "https://github.com/YuriyShandor"
+      }
+    ]
+  },
+  "headerInfo": {
+    "menu": [
+      {
+        "ttl": "About Me",
+        "link": "#about"
+      },
+      {
+        "ttl": "Education",
+        "link": "#education"
+      },
+      {
+        "ttl": "Skills",
+        "link": "#skills"
+      },
+      {
+        "ttl": "Experience",
+        "link": "#experience"
+      },
+      {
+        "ttl": "Portfolio",
+        "link": "#portfolio"
+      }
+    ]
+  },
   "bannerInfo": {
-    "ttl": "I`m Yuriy Shandor",
-    "subTtl": "Junior Front-end Developer"
+    "image": "images/banner-image.jpg"
+  },
+  "aboutInfo": {
+    "photo": "images/my_photo.jpg",
+    "age": "23.05.1993",
+    "experience": "01.03.2018",
+    "english": "Pre-intermediate",
+    "phone": "+38(050)0-175-176",
+    "email": "yuriyshandor@gmail.com"
   }
 }
