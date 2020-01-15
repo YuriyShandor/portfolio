@@ -53,11 +53,138 @@
     "image": "images/banner-image.jpg"
   },
   "aboutInfo": {
+    "sectionTtl": "Personal Information",
     "photo": "images/my_photo.jpg",
-    "age": "23.05.1993",
-    "experience": "01.03.2018",
-    "english": "Pre-intermediate",
-    "phone": "+38(050)0-175-176",
-    "email": "yuriyshandor@gmail.com"
+    "socialsFollowsText": "Follow Me on:",
+    "age": {
+      "ttl": "Age",
+      "val": "05-23-1993"
+    },
+    "experience": {
+      "ttl": "Experience",
+      "val": "03-01-2018"
+    },
+    "english": {
+      "ttl": "English",
+      "val": "Pre-intermediate"
+    },
+    "phone": {
+      "ttl": "Phone",
+      "val": "+38(050)0-175-176"
+    },
+    "email": {
+      "ttl": "Email",
+      "val": "yuriyshandor@gmail.com"
+    },
+    "cv": {
+      "ttl": "Download CV",
+      "val": ""
+    }
+  },
+  "educationInfo": {
+    "sectionTtl": "Education",
+    "universityTtl": "Dnipropetrovsk National University of Railway Transport",
+    "universityLink": "http://new.diit.edu.ua/",
+    "universityLogo": "images/diit-logo.png",
+    "specialty": "Automation and computer-integrated technologies",
+    "degree": "Bachelors degree (2010 - 2016)"
+  },
+  "skillsInfo": {
+    "sectionTtl": "Skills",
+    "technologies": [
+      {
+        "ttl": "HTML5",
+        "logo": "images/HTML5_logo.svg"
+      },
+      {
+        "ttl": "CSS3",
+        "logo": "images/CSS3_logo.svg"
+      },
+      {
+        "ttl": "SASS(SCSS)",
+        "logo": "images/Sass_Logo.svg"
+      },
+      {
+        "ttl": "JavaScript (ES5, ES6)",
+        "logo": "images/JavaScript-logo.svg"
+      },
+      {
+        "ttl": "JQuery",
+        "logo": "images/JQuery-Logo.svg"
+      },
+      {
+        "ttl": "AJAX",
+        "logo": "images/AJAX_logo.svg"
+      },
+      {
+        "ttl": "JSON",
+        "logo": "images/JSON_logo.svg"
+      },
+      {
+        "ttl": "Vue",
+        "logo": "images/Vue.js_Logo_2.svg"
+      },
+      {
+        "ttl": "PHP (WordPress)",
+        "logo": "images/PHP_Logo.svg"
+      },
+      {
+        "ttl": "git",
+        "logo": "images/Git-logo.svg"
+      },
+      {
+        "ttl": "npm",
+        "logo": "images/Npm-logo.svg"
+      },
+      {
+        "ttl": "Gulp",
+        "logo": "images/Gulp.js_Logo.svg"
+      },
+      {
+        "ttl": "Webpack",
+        "logo": "images/webpack-icon.svg"
+      },
+      {
+        "ttl": "Photoshop",
+        "logo": "images/Photoshop_CC_icon.svg"
+      },
+      {
+        "ttl": "Zeplin",
+        "logo": "images/Zeplin-logo.png"
+      },
+      {
+        "ttl": "Figma",
+        "logo": "images/Figma-logo.svg"
+      },
+      {
+        "ttl": "WordPress",
+        "logo": "images/WordPress_logo.svg"
+      },
+      {
+        "ttl": "WooCommerce",
+        "logo": "images/WooCommerce_logo.svg"
+      },
+      {
+        "ttl": "Advanced Custom Fields",
+        "logo": "images/awesome-acf-logo.jpg"
+      },
+      {
+        "ttl": "Bootstrap",
+        "logo": "images/Bootstrap_logo.svg"
+      },
+      {
+        "ttl": "BEM Methodology",
+        "logo": "images/bem-logo.svg"
+      }
+    ]
+  },
+  "experienceInfo": {
+    "sectionTtl": "Experience",
+    "experience": [
+      {
+        "ttl": "HTML5",
+        "logo": "images/HTML5_logo.svg"
+      }
+    ]
   }
 }

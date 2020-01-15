@@ -3,6 +3,8 @@
     <Header :headerInfo='info.headerInfo'/>
     <Banner :bannerInfo='info.bannerInfo' :generalInfo='info.generalInfo'/>
     <About :aboutInfo='info.aboutInfo' :generalInfo='info.generalInfo'/>
+    <Education :educationInfo='info.educationInfo'/>
+    <Skills :skillsInfo='info.skillsInfo'/>
   </div>
 </template>
 
@@ -12,13 +14,17 @@ import info from './info.json';
 import Header from './components/Header.vue';
 import Banner from './components/Banner.vue';
 import About from './components/About.vue';
+import Education from './components/Education.vue';
+import Skills from './components/Skills.vue';
 
 export default {
   name: 'app',
   components: {
     Header,
     Banner,
-    About
+    About,
+    Education,
+    Skills
   },
   data(){
     return{
@@ -73,7 +79,7 @@ a {
 }
 
 .section {
-  padding: 50px 0;
+  padding: 40px 0;
   width: 100%;
 
   &:nth-child(odd) {
@@ -81,15 +87,135 @@ a {
   }
 
   @media only screen and (min-width: 768px) {
-    padding: 75px 0;
+    padding: 60px 0;
   }
 
   @media only screen and (min-width: 992px) {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   @media only screen and (min-width: 1200px) {
-    padding: 125px 0;
+    padding: 100px 0;
+  }
+}
+
+.section-ttl {
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+}
+
+.tooltip {
+  display: block !important;
+  z-index: 10000;
+
+  .tooltip-inner {
+    background: rgba(3, 49, 96, 0.8);
+    font-family: 'Lato', Arial, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px 4px;
+  }
+
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+    border-color: rgba(3, 49, 96, 0.8);
+    z-index: 1;
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      border-width: 0 5px 5px 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 5px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .15s;
   }
 }
 

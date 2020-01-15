@@ -1,5 +1,5 @@
 <template>
-  <section class="section about" id="about">
+  <section class="section" id="about">
     <div class="container">
       <div class="about-block">
         <div class="about-top">
@@ -10,7 +10,7 @@
               <div class="about-top__info-profession">{{generalInfo.profession}}</div>
             </div>
             <div class="about-top__social">
-              <span class="about-top__social-txt">Follow Me on:</span>
+              <span class="about-top__social-txt">{{aboutInfo.socialsFollowsText}}</span>
               <div class="about-top__socials">
                 <a
                   :href="item.link"
@@ -27,31 +27,31 @@
           </div>
         </div>
         <div class="personal-info__block">
-          <h3 class="personal-info__heading">Personal Information</h3>
+          <h3 class="personal-info__heading">{{aboutInfo.sectionTtl}}</h3>
           <div class="personal-info__wrap">
             <div class="personal-info">
               <div class="personal-info__item">
-                <div class="personal-info__item-ttl">Age</div>
-                <div class="personal-info__item-content">{{aboutInfo.age}}</div>
+                <div class="personal-info__item-ttl">{{aboutInfo.age.ttl}}</div>
+                <div class="personal-info__item-content">{{ aboutInfo.age.val | moment("from", true) }}</div>
               </div>
               <div class="personal-info__item">
-                <div class="personal-info__item-ttl">Experience</div>
-                <div class="personal-info__item-content">{{aboutInfo.experience}}</div>
+                <div class="personal-info__item-ttl">{{aboutInfo.experience.ttl}}</div>
+                <div class="personal-info__item-content">{{ aboutInfo.experience.val | moment("from", true) }}</div>
               </div>
               <div class="personal-info__item">
-                <div class="personal-info__item-ttl">English</div>
-                <div class="personal-info__item-content">{{aboutInfo.english}}</div>
+                <div class="personal-info__item-ttl">{{aboutInfo.english.ttl}}</div>
+                <div class="personal-info__item-content">{{aboutInfo.english.val}}</div>
               </div>
               <div class="personal-info__item">
-                <div class="personal-info__item-ttl">Phone</div>
-                <a :href="aboutInfo.phone" class="personal-info__item-content">{{aboutInfo.phone}}</a>
+                <div class="personal-info__item-ttl">{{aboutInfo.phone.ttl}}</div>
+                <a :href="'tel:' + aboutInfo.phone.val" class="personal-info__item-content">{{aboutInfo.phone.val}}</a>
               </div>
               <div class="personal-info__item">
-                <div class="personal-info__item-ttl">Email</div>
-                <a :href="aboutInfo.email" class="personal-info__item-content">{{aboutInfo.email}}</a>
+                <div class="personal-info__item-ttl">{{aboutInfo.email.ttl}}</div>
+                <a :href="'mailto:' + aboutInfo.email.val" class="personal-info__item-content">{{aboutInfo.email.val}}</a>
               </div>
             </div>
-            <a href="img/Yuriy-Shandor__CV.pdf" target="_blank">Download CV</a>
+            <a :href="aboutInfo.cv.val" target="_blank" class="download-cv">{{aboutInfo.cv.ttl}}</a>
           </div>
         </div>
       </div>
@@ -279,6 +279,7 @@ export default {
 
   @media only screen and (min-width: 992px) {
     margin-top: 45px;
+    flex-direction: row;
   }
 }
 
@@ -351,6 +352,36 @@ a.personal-info__item-content {
     &::after {
       width: 100%;
     }
+  }
+}
+
+.download-cv {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 20px;
+  background: #0e82f9;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all, .3s;
+
+  &:hover {
+    background: darken(#0e82f9, 7%);
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 0;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 20px;
+    padding: 15px 40px;
   }
 }
 </style>

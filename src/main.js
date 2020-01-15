@@ -2,6 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueScrollTo from 'vue-scrollto';
 import VueLazyload from 'vue-lazyload';
+import VueMoment from 'vue-moment';
+import VTooltip from 'v-tooltip';
 
 Vue.config.productionTip = false;
 
@@ -16,6 +18,10 @@ Vue.use(VueLazyload, {
   loading: 'dist/loading.gif',
   attempt: 1
 });
+
+Vue.use(VueMoment);
+
+Vue.use(VTooltip);
 
 new Vue({
   render: h => h(App),

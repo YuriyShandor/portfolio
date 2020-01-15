@@ -147,6 +147,7 @@ export default {
     width: 0;
     height: 1px;
     background: #fff;
+    margin: 0 auto;
     transition: all, .3s;
   }
 
