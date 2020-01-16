@@ -20,7 +20,7 @@
                   class="about-top__socials-item"
                   :class="'about-top__socials-item_' + item.ttl"
                 >
-                  <i class="fab" :class="item.icon"></i>
+                  <i :class="item.icon"></i>
                 </a>
               </div>
             </div>
@@ -44,11 +44,11 @@
               </div>
               <div class="personal-info__item">
                 <div class="personal-info__item-ttl">{{aboutInfo.phone.ttl}}</div>
-                <a :href="'tel:' + aboutInfo.phone.val" class="personal-info__item-content">{{aboutInfo.phone.val}}</a>
+                <a :href="'tel:' + generalInfo.phone.val" class="personal-info__item-content">{{generalInfo.phone.val}}</a>
               </div>
               <div class="personal-info__item">
                 <div class="personal-info__item-ttl">{{aboutInfo.email.ttl}}</div>
-                <a :href="'mailto:' + aboutInfo.email.val" class="personal-info__item-content">{{aboutInfo.email.val}}</a>
+                <a :href="'mailto:' + generalInfo.email.val" class="personal-info__item-content">{{generalInfo.email.val}}</a>
               </div>
             </div>
             <a :href="aboutInfo.cv.val" target="_blank" class="download-cv">{{aboutInfo.cv.ttl}}</a>

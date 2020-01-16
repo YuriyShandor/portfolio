@@ -5,6 +5,9 @@
     <About :aboutInfo='info.aboutInfo' :generalInfo='info.generalInfo'/>
     <Education :educationInfo='info.educationInfo'/>
     <Skills :skillsInfo='info.skillsInfo'/>
+    <Experience :experienceInfo='info.experienceInfo'/>
+    <Portfolio :portfolioInfo='info.portfolioInfo'/>
+    <Footer :generalInfo='info.generalInfo'/>
   </div>
 </template>
 
@@ -16,6 +19,9 @@ import Banner from './components/Banner.vue';
 import About from './components/About.vue';
 import Education from './components/Education.vue';
 import Skills from './components/Skills.vue';
+import Experience from './components/Experience.vue';
+import Portfolio from './components/Portfolio.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
@@ -24,7 +30,10 @@ export default {
     Banner,
     About,
     Education,
-    Skills
+    Skills,
+    Experience,
+    Portfolio,
+    Footer
   },
   data(){
     return{
@@ -216,6 +225,33 @@ a {
     visibility: visible;
     opacity: 1;
     transition: opacity .15s;
+  }
+}
+
+.dh__item {
+  a {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.dh__overlay {
+  div {
+    background: rgba(3, 49, 96, 0.8) !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
   }
 }
 

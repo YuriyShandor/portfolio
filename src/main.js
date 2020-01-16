@@ -4,6 +4,8 @@ import VueScrollTo from 'vue-scrollto';
 import VueLazyload from 'vue-lazyload';
 import VueMoment from 'vue-moment';
 import VTooltip from 'v-tooltip';
+import VHover from 'v-hover';
+import VueDirectionHover from 'vue-direction-hover';
 
 Vue.config.productionTip = false;
 
@@ -22,6 +24,9 @@ Vue.use(VueLazyload, {
 Vue.use(VueMoment);
 
 Vue.use(VTooltip);
+
+Vue.use(VHover);
+Vue.use(VueDirectionHover);
 
 new Vue({
   render: h => h(App),

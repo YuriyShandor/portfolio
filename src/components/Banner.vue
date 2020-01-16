@@ -1,10 +1,9 @@
 <template>
-  <section class="banner">
+  <section class="banner" :style="'background-image: url(' + bannerInfo.image + ')'">
     <div class="container banner__container">
       <h1 class="banner__ttl">I`m {{generalInfo.name}}</h1>
       <h2 class="banner__sub-ttl">{{generalInfo.profession}}</h2>
     </div>
-    <img v-lazy="bannerInfo.image" alt="" class="banner__image">
   </section>
 </template>
 
@@ -26,7 +25,9 @@ export default {
   position: relative;
   font-family: 'Josefin Sans', sans-serif;
   color: #fff;
-
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &::before {
     content: '';
@@ -38,6 +39,10 @@ export default {
     top: 0;
     left: 0;
     z-index: 2;
+  }
+
+  @media only screen and (min-width: 992px) {
+    background-attachment: fixed;
   }
 }
 
@@ -92,15 +97,5 @@ export default {
   @media only screen and (min-width: 1200px) {
     font-size: 64px;
   }
-}
-
-.banner__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
 }
 </style>

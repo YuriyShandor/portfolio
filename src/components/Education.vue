@@ -4,7 +4,7 @@
       <h2 class="section-ttl">{{educationInfo.sectionTtl}}</h2>
       <div class="education-block">
         <div class="university-info">
-          <h4 class="university-info__ttl">{{educationInfo.universityTtl}}</h4>
+          <a :href="educationInfo.universityLink" class="university-info__ttl">{{educationInfo.universityTtl}}</a>
           <div class="university-info__specialty">{{educationInfo.specialty}}</div>
           <div class="university-info__degree">{{educationInfo.degree}}</div>
         </div>
@@ -40,6 +40,12 @@ export default {
   font-size: 16px;
   font-weight: 700;
   margin: 0;
+  color: #2c3e50;
+  transition: all, .3s;
+
+  &:hover {
+    color: #1e88e5;
+  }
 
   @media only screen and (min-width: 768px) {
     font-size: 18px;
